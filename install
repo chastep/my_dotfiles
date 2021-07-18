@@ -30,6 +30,7 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 rm -rf $HOME/.zshrc
 chsh -s $(which zsh)
 ln -s /Users/chasestephens/dotfiles/zsh/.zshrc /Users/chasestephens/.zshrc
+stow --ignore ".DS_Store" zsh
 
 # VSCODE
 ln -s /Users/chasestephens/.dotfiles/vscode/settings.json /Users/chasestephens/Library/Application\ Support/Code/User/settings.json
