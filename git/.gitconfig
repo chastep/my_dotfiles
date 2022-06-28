@@ -1,6 +1,6 @@
 [user]
 	name = Chase Stephens
-	email = chasestephens92@gmail.com
+	email = chase.stephens@provi.com
 [core]
 	excludesfile = /Users/chase/.global-gitignore
 [difftool "sourcetree"]
@@ -13,3 +13,5 @@
 	template = /Users/chase/.stCommitMsg
 [credential]
 	helper = osxkeychain
+[safe]
+	directory = /git/provi-integrations
