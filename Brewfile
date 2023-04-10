@@ -6,7 +6,6 @@ brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'git'
 brew 'grep'
-brew 'mackup'
 brew 'nvm'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
@@ -33,5 +32,3 @@ cask 'postman'
 cask 'spectacle'
 cask 'spotify'
 cask 'slack'
-cask 'visual-studio-code'
-cask 'zoom'
