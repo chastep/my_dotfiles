@@ -150,3 +150,5 @@ RPROMPT="[%W %*]"
 # shortcuts for OSX keyboard shortcuts
 # https://stackoverflow.com/questions/12382499/looking-for-altleftarrowkey-solution-in-zsh
 export PATH="${PATH}:${HOME}/.krew/bin"
+export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/chasestephens/.krew/bin:/opt/homebrew/bin:/opt/homebrew/bin
+export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/chasestephens/.krew/bin:/opt/homebrew/bin:/opt/homebrew/bin:/opt/homebrew/bin
