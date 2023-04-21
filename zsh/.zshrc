@@ -1,5 +1,6 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# homebrew path setup with zsh
+# https://stackoverflow.com/a/65568998
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -60,7 +61,7 @@ ZSH_THEME="af-magic"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  sublime
+  vscode
   ruby
   rails
   bundler
@@ -134,7 +135,7 @@ alias opsql='PGPASSWORD=opternative psql -h localhost -U opternative opternative
 alias sync="open -na 'Google Chrome' --args --new-window --incognito 'http://localhost:5000/sync'"
 
 # rbenv settings
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 # NVM settings
 export NVM_DIR="$HOME/.nvm"
@@ -149,6 +150,3 @@ RPROMPT="[%W %*]"
 
 # shortcuts for OSX keyboard shortcuts
 # https://stackoverflow.com/questions/12382499/looking-for-altleftarrowkey-solution-in-zsh
-export PATH="${PATH}:${HOME}/.krew/bin"
-export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/chasestephens/.krew/bin:/opt/homebrew/bin:/opt/homebrew/bin
-export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/chasestephens/.krew/bin:/opt/homebrew/bin:/opt/homebrew/bin:/opt/homebrew/bin

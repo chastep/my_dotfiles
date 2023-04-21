@@ -14,9 +14,21 @@
         "editor.defaultFormatter": "HookyQR.beautify"
     },
     "window.zoomLevel": 0,
-    "eslint.alwaysShowStatus": true,
     "eslint.format.enable": true,
     "aws.samcli.location": "/usr/local/bin/sam",
-    "tabnine.experimentalAutoImports": true,
-    "editor.accessibilitySupport": "off"
+    "editor.accessibilitySupport": "off",
+    "editor.autoClosingBrackets": "never",
+    "git.ignoredRepositories": [
+        "/Users/chasestephens/.vscode/extensions/stepsize.stepsize-1.0.15/resources/demo-repository"
+    ],
+    "vs-code-prettier-eslint.prettierLast": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "prettier-eslint": true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "eslint.run": "onSave",
+    "ruby.rubocop.configFilePath": "/Users/chasestephens/workspace/opternative/.rubocop.yml",
+    "ruby.rubocop.executePath": "/Users/chasestephens/.rbenv/shims/",
+    "ruby.rubocop.useBundler": true,
 }
