@@ -11,7 +11,7 @@
     "vsicons.dontShowNewVersionMessage": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "[javascript]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
+        "editor.defaultFormatter": "prettier-eslint"
     },
     "window.zoomLevel": 0,
     "eslint.format.enable": true,
@@ -24,6 +24,7 @@
     "vs-code-prettier-eslint.prettierLast": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
+    
         "prettier-eslint": true
     },
     "editor.inlineSuggest.enabled": true,
@@ -31,4 +32,5 @@
     "ruby.rubocop.configFilePath": "/Users/chasestephens/workspace/opternative/.rubocop.yml",
     "ruby.rubocop.executePath": "/Users/chasestephens/.rbenv/shims/",
     "ruby.rubocop.useBundler": true,
+    "eslint.codeActionsOnSave.rules": null,
 }

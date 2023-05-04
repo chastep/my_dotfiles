@@ -121,9 +121,6 @@ alias docker-new-npm="ds stop && ds clean && dc down && dcrun web npm install &&
 alias docker-new-file="dcrun web bundle exec rake db:restore:s3[staging] && dcrun web bundle exec rake db:migrate && dc up"
 alias docker-test-reload="dcrun -e RAILS_ENV=test web bundle exec rake db:reload"
 
-# Litify Docker aliases
-alias docrio-accounts="aws dynamodb scan --table-name OrganizationsTable --output text --query 'Items[*].[organizationId.S,organizationName.S,awsId.S]' --profile docrio-master"
-
 # Git aliases
 alias gdevp-rb="gco dev && git pull && gco - && git rebase -i dev"
 alias gamend="git commit --amend --no-edit"
