@@ -1,36 +1,51 @@
 {
-    "files.insertFinalNewline": true,
-    "editor.fontSize": 14,
-    "files.autoSave": "onFocusChange",
-    "editor.tabSize": 2,
-    "editor.wordWrap": "on",
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.snippetSuggestions": "top",
-    "workbench.iconTheme": "vscode-icons",
-    "emmet.triggerExpansionOnTab": true,
-    "vsicons.dontShowNewVersionMessage": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "[javascript]": {
-        "editor.defaultFormatter": "prettier-eslint"
-    },
-    "window.zoomLevel": 0,
-    "eslint.format.enable": true,
-    "aws.samcli.location": "/usr/local/bin/sam",
-    "editor.accessibilitySupport": "off",
-    "editor.autoClosingBrackets": "never",
-    "git.ignoredRepositories": [
-        "/Users/chasestephens/.vscode/extensions/stepsize.stepsize-1.0.15/resources/demo-repository"
-    ],
-    "vs-code-prettier-eslint.prettierLast": true,
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-    
-        "prettier-eslint": true
-    },
-    "editor.inlineSuggest.enabled": true,
-    "eslint.run": "onSave",
-    "ruby.rubocop.configFilePath": "/Users/chasestephens/workspace/opternative/.rubocop.yml",
-    "ruby.rubocop.executePath": "/Users/chasestephens/.rbenv/shims/",
-    "ruby.rubocop.useBundler": true,
-    "eslint.codeActionsOnSave.rules": null,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "never",
+  "editor.definitionLinkOpensInPeek": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.*.ts"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  "eslint.codeActionsOnSave.rules": null,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "onFocusChange",
+  "git.ignoredRepositories": [
+    "/Users/chasestephens/.vscode/extensions/stepsize.stepsize-1.0.15/resources/demo-repository"
+  ],
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "ruby.intellisense": "rubyLocate",
+  "ruby.rubocop.configFilePath": "/Users/chasestephens/workspace/opternative/.rubocop.yml",
+  "ruby.rubocop.executePath": "/Users/chasestephens/.rbenv/shims/",
+  "ruby.rubocop.useBundler": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.iconTheme": "vscode-icons"
 }
