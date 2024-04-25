@@ -3,7 +3,6 @@
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "never",
@@ -13,7 +12,7 @@
     "*.ts": "${capture}.js, ${capture}.*.ts"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.showToolbar": "always",
@@ -42,10 +41,15 @@
     "markdown": false,
     "scminput": false
   },
-  "ruby.intellisense": "rubyLocate",
-  "ruby.rubocop.configFilePath": "/Users/chasestephens/workspace/opternative/.rubocop.yml",
-  "ruby.rubocop.executePath": "/Users/chasestephens/.rbenv/shims/",
-  "ruby.rubocop.useBundler": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "rubocop.vscode-rubocop"
+  },
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "window.commandCenter": false,
+  "rubocop.commandPath": "${userHome}/.rbenv/shims/rubocop",
+  "terminal.integrated.stickyScroll.enabled": true
 }
