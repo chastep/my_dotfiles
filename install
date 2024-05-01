@@ -26,6 +26,7 @@ rm -rf $HOME/.global-gitignore
 stow --ignore ".DS_Store" git
 
 # OH-MY-ZSH
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 rm -rf $HOME/.zshrc
 chsh -s $(which zsh)
