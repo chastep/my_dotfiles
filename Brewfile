@@ -1,6 +1,3 @@
-# Taps
-tap 'homebrew/cask'
-
 # Binaries
 brew 'awscli'
 brew 'bash' # Latest Bash version
@@ -17,7 +14,6 @@ brew 'rbenv'
 brew 'mysql'
 brew 'postgresql'
 brew 'node'
-brew 'redis'
 brew 'yarn'
 brew 'zsh'
 brew 'zsh-completions'
@@ -25,10 +21,9 @@ brew 'zsh-completions'
 # Apps
 cask 'docker'
 cask 'github'
-cask 'google-chrome'
 cask 'iterm2'
-cask 'postgres'
+cask 'postgres@14'
 cask 'postman'
-cask 'spectacle'
 cask 'spotify'
 cask 'slack'
+cask 'rectangle'
