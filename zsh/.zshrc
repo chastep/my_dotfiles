@@ -111,9 +111,9 @@ source $ZSH/oh-my-zsh.sh
 # alias hellothere="~/.oh-my-zsh/custom/hellothere.zsh"
 
 # Visibly Docker aliases
-alias dc="docker-compose"
+alias dc="docker compose"
 alias ds="docker-sync"
-alias dcrun="docker-compose run --rm"
+alias dcrun="docker compose run --rm"
 alias dcwebc="dcrun web rails c"
 alias dcbash="dcrun web bash"
 alias dps="docker ps"
