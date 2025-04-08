@@ -2,6 +2,7 @@
 #
 # 'Choose workspace'
 # Shows a workspace chooser using fzf
+# https://code.visualstudio.com/docs/editing/workspaces/workspaces
 
 cws() {
   local ws_dir="$HOME/workspace/dev"

@@ -129,6 +129,8 @@ if [ -d /opt/homebrew/opt/asdf/shims ]; then
   export PATH="/opt/homebrew/opt/asdf/shims:$PATH"
 fi
 
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 
 # Load all path files
 for f in $DOTFILES/path/*.path.sh; do source $f; done
