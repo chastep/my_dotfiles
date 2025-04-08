@@ -252,11 +252,16 @@ __construct_repo_url() {
 
 # Use llm cli to generate a commit message
 # Work in progress
-gcmsgpt() {
-  if [ -n "$1" ]; then
-    commit_msg=$(git diff "$1" | llm prompt "$(cat ~/.dotfiles/llm/prompts/commit-msg.txt)")
-  else
-    commit_msg=$(git diff | llm prompt "$(cat ~/.dotfiles/llm/prompts/commit-msg.txt)")
-  fi
-  echo "$commit_msg"
+# gcmsgpt() {
+#   if [ -n "$1" ]; then
+#     commit_msg=$(git diff "$1" | llm prompt "$(cat ~/.dotfiles/llm/prompts/commit-msg.txt)")
+#   else
+#     commit_msg=$(git diff | llm prompt "$(cat ~/.dotfiles/llm/prompts/commit-msg.txt)")
+#   fi
+#   echo "$commit_msg"
+# }
+
+# Method "gamend" to amend the last commit message
+gamend() {
+  git commit --amend --no-edit
 }
