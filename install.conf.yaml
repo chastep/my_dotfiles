@@ -1,0 +1,83 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~', '~/bin']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  -
+    command: ./macos/setup-homebrew.sh
+    description: Installing Homebrew and Essential Packages
+    stdout: true
+  -
+    description: Downloading vim-plug to ~/.vim/autoload/plug.vim
+    command: curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    stdout: true
+
+- link:
+    # ~/.dotfiles: ''
+
+    ~/.vimrc: vim/vimrc
+    ~/.config/nvim:
+      path: nvim
+      force: true
+
+    ~/.zshrc:
+      path: zsh/zshrc.zsh
+      force: true
+    ~/.oh-my-zsh: zsh/oh-my-zsh
+    ~/.zgenom: zsh/zgenom
+    ~/.asdfrc: zsh/asdfrc
+    ~/.hushlogin: zsh/hushlogin
+
+    ~/.bashrc:
+      path: bash/bashrc
+      force: true
+
+    ~/.prettierrc.js:
+      path: node/prettierrc.js
+
+    ~/.config/fastfetch:
+      path: fastfetch
+      force: true
+
+    ~/bin:
+      glob: true
+      path: scripts/*
+      relink: true
+
+    # VS Code MacOS
+    ~/Library/Application Support/Code/User:
+      if: '[ `uname` = Darwin ]'
+      glob: true
+      path: vscode/macos/*.json
+      force: true
+
+    ~/Library/Application Support/Code/User/snippets:
+      if: '[ `uname` = Darwin ]'
+      path: vscode/snippets
+      force: true
+
+- asdf:
+  - plugin: nodejs
+    url: https://github.com/asdf-vm/asdf-nodejs
+    versions:
+      - latest
+  - plugin: yarn
+    url: https://github.com/twuni/asdf-yarn
+    versions:
+      - latest
+
+- shell:
+  -
+    command: ./git/set-gitconfig.sh
+    description: Configuring Git
+    stdout: true
+    quiet: false
+  -
+    command: yarn config set prefix ~/.yarn
+    description: Configuring yarn prefix
+    stdout: true
+    quiet: false

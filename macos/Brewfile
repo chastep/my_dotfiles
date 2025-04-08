@@ -1,0 +1,51 @@
+# Binaries
+brew 'asdf'
+brew 'awscli'
+# Bourne-Again SHell, a UNIX command interpreter
+brew 'bash'
+# Clone of cat(1) with syntax highlighting and Git integration
+brew 'bat'
+# Insanely fast image printing in your terminal
+brew 'catimg'
+# Get a file from an HTTP, HTTPS or FTP server
+brew 'curl'
+# Clean Docker containers, images, networks, and volumes
+brew 'docker-clean'
+brew 'fastfetch'
+# Simple, fast and user-friendly alternative to find
+brew 'fd'
+# Command-line fuzzy finder written in Go
+brew 'fzf'
+# GitHub command-line tool
+brew 'gh'
+brew 'gpg'
+# Distributed revision control system
+brew 'git'
+# Syntax-highlighting pager for git and diff output
+brew 'git-delta'
+brew 'git-lfs'
+brew 'grep'
+# Convert source code to formatted text with syntax highlighting
+brew 'highlight'
+# Image manipulation library
+brew 'jpeg'
+# Lightweight and flexible command-line JSON processor
+brew 'jq'
+# Mac App Store command-line interface
+brew 'mas'
+brew 'node'
+brew 'ripgrep'
+brew 'ruby'
+brew 'trash' # Manage the Trash bin
+brew 'tree' # List directories in a tree structure
+brew 'yarn'
+brew 'zsh'
+brew 'zsh-completions'
+
+# Apps
+cask 'docker'
+cask 'iterm2'
+cask 'firefox'
+cask 'spotify'
+cask 'rectangle'
+cask 'visual-studio-code'
