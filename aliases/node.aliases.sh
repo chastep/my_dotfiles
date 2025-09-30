@@ -16,21 +16,6 @@ alias yrm='yarn remove'
 alias yad='yarn add --dev'
 alias ynuke='rm -f yarn.lock && rm -rf node_modules && yarn'
 
-alias la='lerna add'
-alias lad='lerna add --dev'
-
 alias cpj='cat package.json | jless'
 alias cpjs='cat package.json | jq -r ".scripts" | jless'
 alias cpjv='cat package.json | jq -r ".version"'
-
-# Reverse pnpm aliases set by pnpm plugin
-alias pi='pnpm install'
-alias pin='pnpm init'
-
-alias pii='pnpm install --ignore-workspace'
-alias prein='rm -rf node_modules && pnpm install'
-alias pv='pnpm view'
-
-function pvl() {
-  pnpm view "$1" dist-tags.latest
-}
