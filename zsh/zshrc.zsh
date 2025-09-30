@@ -40,8 +40,6 @@ if ! zgenom saved; then
     zgenom load andrewferrier/fzf-z
     zgenom load reegnz/jq-zsh-plugin
 
-    zgenom ohmyzsh plugins/asdf
-
     zgenom load ntnyq/omz-plugin-pnpm
 
     # These 2 must be in this order
@@ -122,14 +120,6 @@ fi
 if [ -d /opt/homebrew/sbin ]; then
   export PATH="/opt/homebrew/sbin:$PATH"
 fi
-if [ -d /opt/homebrew/opt/asdf/bin ]; then
-  export PATH="/opt/homebrew/opt/asdf/bin:$PATH"
-fi
-if [ -d /opt/homebrew/opt/asdf/shims ]; then
-  export PATH="/opt/homebrew/opt/asdf/shims:$PATH"
-fi
-
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 
 # Load all path files
@@ -185,8 +175,6 @@ fi
 export ITERM2_SHOULD_DECORATE_PROMPT=0
 source $DOTFILES/iterm2/iterm2_shell_integration.zsh
 
-export ASDF_DOWNLOAD_PATH=bin/install
-source /opt/homebrew/opt/asdf/libexec/asdf.sh
 source /opt/homebrew/share/zsh/site-functions
 
 # tabtab source for packages
@@ -195,3 +183,10 @@ source /opt/homebrew/share/zsh/site-functions
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/p10k.zsh.
 [[ ! -f ~/.dotfiles/zsh/p10k.zsh ]] || source ~/.dotfiles/zsh/p10k.zsh
+
+# bun completions
+[ -s "/Users/chase/.bun/_bun" ] && source "/Users/chase/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

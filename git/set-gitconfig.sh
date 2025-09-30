@@ -3,7 +3,7 @@
 
 # Name
 git config --global user.name "Chase Stephens"
-git config --global user.email 'chasestephens@92.com'
+git config --global user.email 'chasestephens92@gmail.com'
 
 # Set git global settings
 git config --global core.autocrlf false

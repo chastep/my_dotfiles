@@ -25,15 +25,15 @@ defaults write com.apple.BezelServices kDimTime -int 300
 echo "  › Play feedback when volume is changed"
 defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.sound.beep.feedback -int 1
 
-echo "  › Require password immediately after sleep or screen saver begins"
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+# echo "  › Require password immediately after sleep or screen saver begins"
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-echo "  › Enable text replacement almost everywhere"
-defaults write -g WebAutomaticTextReplacementEnabled -bool true
+# echo "  › Enable text replacement almost everywhere"
+# defaults write -g WebAutomaticTextReplacementEnabled -bool true
 
-echo "  › Disable Dashboard"
-defaults write com.apple.dashboard mcx-disabled -bool true
+# echo "  › Disable Dashboard"
+# defaults write com.apple.dashboard mcx-disabled -bool true
 
 echo "  › Avoid the creation of .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -45,30 +45,30 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 echo ""
 echo "› Keyboard/Mouse:"
-echo "  › Disable press-and-hold for keys in favor of key repeat"
-defaults write -g ApplePressAndHoldEnabled -bool false
+# echo "  › Disable press-and-hold for keys in favor of key repeat"
+# defaults write -g ApplePressAndHoldEnabled -bool false
 
 echo "  › Set a really fast key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-echo "  › Disable smart quotes and smart dashes as they're annoying when typing code"
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+# echo "  › Disable smart quotes and smart dashes as they're annoying when typing code"
+# defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+# defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-echo "  › Disable auto-correct"
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+echo "  › Enable automatic spelling correction"
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool true
 
-echo "  › Disable auto-capitalization and double-space period"
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -int 0
+echo "  › Enable auto-capitalization and double-space period"
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool true
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -int 1
 
-echo "  › Use function keys on external keyboards"
-defaults write NSGlobalDomain com.apple.keyboard.fnState -int 1
+# echo "  › Dont use the funcion keys as standard function keys on external keyboards"
+# defaults write NSGlobalDomain com.apple.keyboard.fnState -int 0
 
 echo "  › Set up trackpad & mouse speed to a reasonable number"
-defaults write -g com.apple.trackpad.scaling 1.5
-defaults write -g com.apple.mouse.scaling 1.5
+defaults write -g com.apple.trackpad.scaling 1.2
+defaults write -g com.apple.mouse.scaling 1.2
 
 echo "  › Set keyboard repeat rate to a reasonable number"
 defaults write -g InitialKeyRepeat -int 10
@@ -78,14 +78,14 @@ echo "  › Enable tap to click for trackpad"
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-echo " › Set touchbar to app controls with control strip"
-defaults write com.apple.touchbar.agent PresentationModeGlobal -string appWithControlStrip
+# echo " › Set touchbar to app controls with control strip"
+# defaults write com.apple.touchbar.agent PresentationModeGlobal -string appWithControlStrip
 
-echo " › Enable full keyboard access for all controls (Tab in modal dialogs)"
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+# echo " › Enable full keyboard access for all controls (Tab in modal dialogs)"
+# defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-echo " › Disable Fn key emoji picker"
-defaults write com.apple.HIToolbox AppleFnUsageType -int 0
+# echo " › Disable Fn key emoji picker"
+# defaults write com.apple.HIToolbox AppleFnUsageType -int 0
 
 #############################
 
@@ -96,9 +96,6 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 echo "  › Don't automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
-
-echo "  › Increase the window resize speed for Cocoa applications"
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 echo "  › Show battery percent"
 defaults write com.apple.menuextra.battery ShowPercent -bool true
@@ -117,8 +114,8 @@ echo "› Finder:"
 echo "  › New Finder window opens HOME directory"
 defaults write com.apple.finder NewWindowTarget -string 'PfHm'
 
-echo "  › Display file extensions"
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# echo "  › Display file extensions"
+# defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 echo "  › Always open everything in Finder's list view"
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
