@@ -1,17 +1,47 @@
-# Chase's Dotfiles
-These are my dotfiles. There are many like it, but these are mine
+# dotfiles
 
-### Setting up your Mac
+[![Powered by dotbot][dbshield]][dblink]
 
-1. Update macOS to the latest version with the App Store
-2. Install Xcode from the App Store, open it and accept the license agreement
-3. Install macOS Command Line Tools by running `xcode-select --install`
-4. [Generate a new public and private SSH key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add them to Github
-5. Clone this repo to `~/.dotfiles`
-6. Run `install.sh` to start the installation
+[dblink]: https://github.com/anishathalye/dotbot
+[dbshield]: https://img.shields.io/badge/powered%20by-dotbot-blue?style=flat
 
-## TODO
-- [set key repeat rate on install](https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x)
-- make sure all global gems/node modules are installed during install if not present (bundler, rbenv, stow, git, etc.)
-- make sure permissions are setup correctly for all gems/rbenv/ruby versions as well -> https://github.com/rbenv/rbenv/issues/938
-- configure mackup
+> Personal dotfiles configuration
+
+| Component    | Tool                                                      | Config                                   |
+| ------------ | --------------------------------------------------------- | ---------------------------------------- |
+| Installation | [Dotbot](https://github.com/anishathalye/dotbot)          | [install.conf.yaml](./install.conf.yaml) |
+| Terminal     | [Ghostty](https://ghostty.org)                            | [config](./ghostty/config)               |
+| Shell        | Zsh + [zgenom](https://github.com/jandamm/zgenom)         | [zshrc.zsh](./zsh/zshrc.zsh)             |
+| Theme        | [Powerlevel10k](https://github.com/romkatv/powerlevel10k) | [p10k.zsh](./zsh/p10k.zsh)               |
+| Versions     | [asdf](https://asdf-vm.com)                               | [.tool-versions](./.tool-versions)       |
+
+## Usage
+
+*Prerequisites: git, zsh*
+
+### Installation
+
+```sh
+git clone git@github.com:denolfe/dotfiles.git ~/.dotfiles --recursive
+cd ~/.dotfiles
+make install
+make asdf-setup  # Install language versions
+make macos       # Apply macOS defaults
+```
+
+### Available Commands
+
+```sh
+make help
+```
+
+| Command | Description |
+|---------|-------------|
+| `make install` | Run dotbot (links, homebrew, git config) |
+| `make link` | Only run dotbot linking |
+| `make brew` | Save current Homebrew packages to Brewfile |
+| `make brew-restore` | Install Homebrew and restore packages |
+| `make macos` | Apply macOS system defaults |
+| `make asdf-setup` | Install asdf plugins and versions |
+| `make vscode-install` | Install VS Code extensions |
+| `make vscode-save` | Save current VS Code extensions |

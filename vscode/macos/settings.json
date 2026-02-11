@@ -1,6 +1,6 @@
 {
   "emmet.triggerExpansionOnTab": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 12,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.snippetSuggestions": "top",
@@ -30,9 +30,6 @@
   "eslint.run": "onSave",
   "eslint.codeActionsOnSave.rules": null,
   "files.insertFinalNewline": true,
-  "git.ignoredRepositories": [
-    "/Users/chasestephens/.vscode/extensions/stepsize.stepsize-1.0.15/resources/demo-repository"
-  ],
   "git.autofetch": true,
   "github.copilot.enable": {
     "*": true,
@@ -68,5 +65,6 @@
   },
   "redhat.telemetry.enabled": true,
   "markdown-preview-enhanced.liveUpdate": false,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "keyboard.dispatch": "keyCode"
 }

@@ -1,50 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-echo "Setting up your Mac..."
+set -e
 
-# Check for Homebrew and install if we don't have it
-if test ! $(which brew); then
-  echo "Installing Homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  echo "Homebrew Installed!"
-fi
+CONFIG="install.conf.yaml"
+DOTBOT_DIR="dotbot"
 
-# Update Homebrew recipes
-brew update
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
-brew bundle
-
-# Create a workspace directory
-mkdir $HOME/workspace
-
-# GIT
-# Removes .gitconfig and .globabl-gitignore from $HOME (if it exists) and symlinks the files from the .dotfiles
-rm -rf $HOME/.gitconfig
-rm -rf $HOME/.global-gitignore
-stow --ignore ".DS_Store" git
-
-# OH-MY-ZSH
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-rm -rf $HOME/.zshrc
-chsh -s $(which zsh)
-ln -s /Users/chasestephens/dotfiles/zsh/.zshrc /Users/chasestephens/.zshrc
-stow --ignore ".DS_Store" zsh
-
-# VSCODE
-ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-sh ~/dotfiles/vscode/installvscodeextensions
-
-# ITERM2
-# Specify the preferences directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2/"
-# Tell iTerm2 to use the custom preferences in the directory
-defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
-# MAC STUFF
-defaults write -g InitialKeyRepeat -int 10
-defaults write -g KeyRepeat -int 1
-
-echo "Setup Complete!"
+cd "${BASEDIR}"
+git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${DOTBOT_DIR}"
